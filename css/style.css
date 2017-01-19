@@ -1,0 +1,45 @@
+body {
+	font-family: 'Asap', sans-serif;
+}
+
+.gallery-content .galerry-item {
+	width: 100%;
+	padding-top: 66%;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: block;
+	position: relative;
+	border-radius: 5px;
+}
+
+.gallery-content .galerry-item span {
+	background-color: #000;
+	opacity: 0.5;
+	color: #fff;
+	position: absolute;
+	top:0;
+	left:0;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+	padding-top: 20px;
+	display: none;
+	border-radius: 5px;
+}
+
+.gallery-content .galerry-item:hover span {
+	display: block;
+}
+
+.gallery-content .col-md-3 {
+	padding-top: 30px;
+}
+
+@media (max-width: 992px) and (min-width: 320px) {
+.gallery-content  .col-md-3 {
+    width: 50%;
+    float: left;
+}
+
+}

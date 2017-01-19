@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Asap:700' rel='stylesheet' type='text/css'>
+    <script src="node_modules/angular/angular.js"></script>
+</head>
+<body>
+<div class="container" ng-controller="galleryCtrl">
+    <h1>Gallery</h1>
+    <h3>Tag filter</h3>
+    <div class="btn-group gallery-filter" role="group">
+	  <button type="button" class="btn btn-default" ng-repeat="tag in tags" ng-class="{active : tag.isSelected}" ng-click="filterTag(tag)">{{tag.name}}</button>
+	</div>
+    <div class="gallery-content">
+    	<div class="row">
+            <div class="col-md-3" ng-repeat="photo in photos" >
+                <a href="{{photo.link}}" class="galerry-item" style="background-image:url({{photo.media.m}});"><span>{{photo.title}}</span></a>
+            </div>
+		</div>
+    </div>
+</div>
+<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/galleryController.js"></script>
+</body>
+</html>
